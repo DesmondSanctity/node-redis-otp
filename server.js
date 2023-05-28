@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
 // create a client connection
 export const client = redis.createClient({
-    url: process.env.REDIS_URL
+    // url: process.env.REDIS_URL
 });
 
 // on the connection

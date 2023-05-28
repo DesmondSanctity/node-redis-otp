@@ -26,7 +26,10 @@ export const UserSchema = new mongoose.Schema({
         type: String,
         unique: false,
     },
-    posts: [{ type: Schema.Types.ObjectId, ref: "Post" }],
+    isVerified: {
+        type: Boolean,
+        default: false
+    }
 });
 
 export default mongoose.model.Users || mongoose.model('User', UserSchema);
